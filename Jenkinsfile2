@@ -1,1 +1,10 @@
+node {
+    stage('git clone') { 
+    git branch: 'main', url: 'https://github.com/NakkaIndu/spring-petclinic.git'
+    }
+    stage('generate build') {
+    sh'mvn package'
+    }
+    
+}
 
